@@ -1,0 +1,44 @@
+name: "Release"
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  Artifacts:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - name: GitHub Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+          cache: true
+
+      - name: Build release binary
+        run: cargo build --release
+
+      - name: Make archive for GE-Proton setup
+        run: |
+         cp ./target/release/use-proton-latest ./steam-tools/GE-Proton/use-proton-latest
+         tar -czf ./steam-tools/GE-Proton.tar.gz -C  ./steam-tools/GE-Proton .
+
+      - name: Release on GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            ./steam-tools/GE-Proton.tar.gz

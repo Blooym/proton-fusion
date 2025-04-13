@@ -1,0 +1,24 @@
+[package]
+name = "use-proton-latest"
+description = "Automatic updating of custom proton installations using GitHub releases"
+version = "0.1.0"
+authors = ["Blooym"]
+repository = "https://github.com/Blooym/use-proton-latest"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.97"
+bytes = "1.10.1"
+clap = { version = "4.5.36", features = ["derive", "string"] }
+flate2 = "1.1.1"
+octocrab = { version = "0.44.0" }
+reqwest = { version = "0.12.15", default-features = false, features = [
+    "rustls-tls",
+    "http2",
+    "charset",
+] }
+tar = "0.4.44"
+tokio = { version = "1.44.2", features = ["macros", "rt"] }
+
+[profile.release]
+lto = true
