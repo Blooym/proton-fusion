@@ -14,7 +14,7 @@ Install scripts have been created to automatically handle installation for you. 
 After installing any of the following, you should:
 - Restart your Steam/Steamdeck to refresh available Steam compatibility tools
 - Go to the game of your choice -> Properties -> Compatibility
-- Select "<ProtonName>-Latest" from the dropdown menu.
+- Select "ProtonName-Latest" from the dropdown menu.
 
 ### GE-Proton
 
