@@ -97,7 +97,7 @@ async fn main() -> Result<()> {
             .filter_map(Result::ok)
             .collect::<Vec<_>>();
         if entries.len() == 1 && entries[0].path().is_dir() {
-            fs::rename(&entries[0].path(), &proton_directory)?;
+            fs::rename(entries[0].path(), &proton_directory)?;
             let _ = fs::remove_dir_all(&tmp_install_dir);
         } else {
             fs::rename(&tmp_install_dir, &proton_directory)?;
