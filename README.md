@@ -21,17 +21,17 @@ After installing any of the following, you should:
 #### Native Steam & Steamdeck
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup/install-ge-proton.sh)" ~/.steam/root/compatibilitytools.d/GE-Proton-Latest
+curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup/install-ge-proton.sh | sh -s ~/.steam/root/compatibilitytools.d/GE-Proton-Latest
 ```
 
 #### Flatpak Steam
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup/install-ge-proton.sh)" ~/.var/app/com.valvesoftware.Steam/.steam/root/compatibilitytools.d/GE-Proton-Latest
+curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup/install-ge-proton.sh | sh -s ~/.var/app/com.valvesoftware.Steam/.steam/root/compatibilitytools.d/GE-Proton-Latest
 ```
 
 #### Snap Steam (Unsupported)
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup/install-ge-proton.sh)" ~/snap/steam/common/.steam/root/compatibilitytools.d/
+curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup/install-ge-proton.sh | sh -s ~/snap/steam/common/.steam/root/compatibilitytools.d/
 ```
