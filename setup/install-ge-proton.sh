@@ -7,7 +7,8 @@ fi
 
 compat_dir=$1
 if [ -d "$compat_dir" ]; then
-  echo "$$compat_dir already exists - refusing to overwrite."
+  echo "$compat_dir already exists - refusing to overwrite."
+  exit 1
 fi
 
 echo "Installing GE-Proton-Latest to $compat_dir"
