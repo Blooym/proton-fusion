@@ -35,3 +35,13 @@ curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup
 ```sh
 curl -fsSL https://raw.githubusercontent.com/Blooym/use-proton-latest/main/setup/install-ge-proton.sh | sh -s ~/snap/steam/common/.steam/root/compatibilitytools.d/
 ```
+
+## Optional Extras
+
+These are additional features or functionality that can be enabled by setting environment variables in a game's launch arguments. They are supported by all custom proton versions offered by this tool.
+
+| Name               | Description                                                                                                                                                            | Enablement Variable   | Supported from   |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|----------------- |
+| Discord RPC Bridge | Automatically run `0e4ef622/wine-discord-ipc-bridge` when launching a game. This allows most Windows games to communicate with Discord and display rich presence data. | `DISCORDRPC_BRIDGE=1` | v0.2.0           |
+
+
