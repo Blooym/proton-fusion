@@ -42,4 +42,4 @@ These are additional features or functionality that can be enabled by setting en
 
 | Name               | Description                                                                                                                                                            | Enablement Variable   | Supported from |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------- |
-| Discord RPC Bridge | Automatically run `0e4ef622/wine-discord-ipc-bridge` when launching a game. This allows most Windows games to communicate with Discord and display rich presence data. | `DISCORDRPC_BRIDGE=1` | v0.2.0         |
+| Discord RPC Bridge | Automatically run `0e4ef622/wine-discord-ipc-bridge` when launching a game. This allows most Windows games to communicate with Discord and display rich presence data. | `DISCORDRPC_BRIDGE=1` | v0.1.0         |
