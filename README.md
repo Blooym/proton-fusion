@@ -1,11 +1,13 @@
 # proton-fusion
 
-The latest custom proton builds with a little extra on top.
+Automatically updating custom proton builds with a little extra on top.
 
 ## Disclaimers
 
 - **When Proton is being installed or automatically updated your game will take longer than usual to launch.** This is normal and depends entirely on your internet speed.
 - **Automatically updating a proton prefix is a potentially breaking action.** While upgrading is safer than downgrading versions, it may still break things depending on the proton version and the changes made between them, be aware of this when using proton-fusion.
+- **Using the provided [optional extras](#optional-extras) may break things.** Always be careful with what you choose to enable.
+- **Do not report bugs about proton versions here to upstreams** unless you know, for certain, that the bug lies there.
 
 ## Setup
 
