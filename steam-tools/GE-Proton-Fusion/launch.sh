@@ -7,7 +7,7 @@ set -e
 # Essentials
 tool_dir="$(realpath "$(dirname "$0")")"
 proton_entrypoint=$tool_dir/proton/proton
-updater_entrypoint=$tooldir/proton-updater
+updater_entrypoint=$tool_dir/proton-updater
 
 # Extras
 extras_dir=$tool_dir/extras
