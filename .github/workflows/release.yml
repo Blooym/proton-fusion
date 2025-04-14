@@ -27,13 +27,14 @@ jobs:
           components: rustfmt, clippy
           cache: true
 
-      - name: Build release binary
+      - name: Build proton-updater binary
+        working-directory: ./proton-updater
         run: cargo build --release
 
-      - name: Make archive for GE-Proton setup
+      - name: Make archive for GE-Proton-Fusion
         run: |
-         cp ./target/release/use-proton-latest ./steam-tools/GE-Proton/use-proton-latest
-         tar -czf ./steam-tools/GE-Proton.tar.gz -C  ./steam-tools/GE-Proton .
+         cp ./proton-updater/target/release/proton-updater ./steam-tools/GE-Proton-Fusion/proton-updater
+         tar -czf ./steam-tools/GE-Proton-Fusion.tar.gz -C  ./steam-tools/GE-Proton-Fusion .
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v2
@@ -41,4 +42,4 @@ jobs:
           generate_release_notes: true
           fail_on_unmatched_files: true
           files: |
-            ./steam-tools/GE-Proton.tar.gz
+            ./steam-tools/GE-Proton-Fusion.tar.gz

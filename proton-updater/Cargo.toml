@@ -1,13 +1,13 @@
 [package]
-name = "use-proton-latest"
+name = "proton-updater"
 description = "Automatic updating of custom proton installations using GitHub releases"
 version = "0.1.0"
 authors = ["Blooym"]
-repository = "https://github.com/Blooym/use-proton-latest"
+repository = "https://github.com/Blooym/proton-fusion"
 edition = "2024"
 
 [dependencies]
-anyhow = "1.0.97"
+anyhow = "1.0.98"
 bytes = "1.10.1"
 clap = { version = "4.5.36", features = ["derive", "string"] }
 flate2 = "1.1.1"

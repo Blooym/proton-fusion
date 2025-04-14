@@ -2,10 +2,10 @@
 {
   "compat_tools"
   {
-    "GE-Proton-Latest"
+    "GE-Proton-Fusion"
     {
       "install_path" "."
-      "display_name" "GE-Proton-Latest"
+      "display_name" "GE-Proton-Fusion"
       "from_oslist"  "windows"
       "to_oslist"    "linux"
     }

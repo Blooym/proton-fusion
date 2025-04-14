@@ -21,7 +21,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  Test:
+  Proton-Updater:
+    name: proton-updater
     if: github.event.pull_request.draft == false || github.event_name == 'push'
     runs-on: ubuntu-22.04
     steps:
@@ -38,15 +39,19 @@ jobs:
           cache: true
 
       - name: Ensure code compiles
+        working-directory: ./proton-updater
         run: |
           cargo build --all
           cargo build --all --release
 
       - name: Run Tests
+        working-directory: ./proton-updater
         run: cargo test --all
 
       - name: Run Clippy
+        working-directory: ./proton-updater
         run: cargo clippy --all -- -D warnings
 
       - name: Run Rustfmt
+        working-directory: ./proton-updater
         run: cargo fmt --all --check
