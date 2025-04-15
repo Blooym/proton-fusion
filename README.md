@@ -27,13 +27,13 @@ curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install-g
 #### Flatpak Steam
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install-ge-proton.sh | sh -s ~/.var/app/com.valvesoftware.Steam/.steam/root/compatibilitytools.d/GE-Proton-Latest
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install-ge-proton.sh | sh -s ~/.var/app/com.valvesoftware.Steam/.steam/root/compatibilitytools.d/GE-Proton-Fusion
 ```
 
 #### Snap Steam (Unsupported)
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install-ge-proton.sh | sh -s ~/snap/steam/common/.steam/root/compatibilitytools.d/GE-Proton-Latest
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install-ge-proton.sh | sh -s ~/snap/steam/common/.steam/root/compatibilitytools.d/GE-Proton-Fusion
 ```
 
 ## Optional Extras
