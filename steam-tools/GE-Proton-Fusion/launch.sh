@@ -23,7 +23,7 @@ if [[ "$1" == "run" ]]; then
 fi
 
 echo "Checking for proton updates"
-if ! "$updater_entrypoint" --install-dir-base="$tool_dir" --repo-owner="GloriousEggroll" --repo-name="proton-ge-custom" --tarball-name="GE-Proton"; then
+if ! "$updater_entrypoint" --install-dir-base="$tool_dir" --build="proton-ge"; then
     if [ -f "$proton_entrypoint" ]; then
     	zenity --info --title "Update Failed" --text "Something went wrong when updating Proton-GE to a new version, an older version will be used instead." --no-wrap --no-markup || true
         echo "Warning: $updater_entrypoint exited unsuccessfully, continuing with old proton install."
