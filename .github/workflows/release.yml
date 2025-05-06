@@ -27,14 +27,14 @@ jobs:
           components: rustfmt, clippy
           cache: true
 
-      - name: Build proton-updater binary
-        working-directory: ./proton-updater
-        run: cargo build --release
-
-      - name: Make archive for GE-Proton-Fusion
+      - name: Build steam tools
         run: |
-         cp ./proton-updater/target/release/proton-updater ./steam-tools/GE-Proton-Fusion/proton-updater
-         tar -czf ./steam-tools/GE-Proton-Fusion.tar.gz -C  ./steam-tools/GE-Proton-Fusion .
+         ./build.sh ge ./build/GE-Proton-Fusion
+         ./build.sh tkg-valvebe ./build/Proton-Tkg-Valvebe-Fusion
+         ./build.sh tkg-wine ./build/Proton-Tkg-Wine-Fusion
+         tar -czf ./build/GE-Proton-Fusion.tar.gz -C ./build/GE-Proton-Fusion .
+         tar -czf ./build/Proton-Tkg-Valvebe-Fusion.tar.gz -C ./build/Proton-Tkg-Valvebe-Fusin .
+         tar -czf ./build/Proton-Tkg-Wine-Fusion.tar.gz -C ./build/Proton-Tkg-Wine-Fusion .
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v2
@@ -42,4 +42,6 @@ jobs:
           generate_release_notes: true
           fail_on_unmatched_files: true
           files: |
-            ./steam-tools/GE-Proton-Fusion.tar.gz
+            ./build/GE-Proton-Fusion.tar.gz
+            ./build/Proton-Tkg-Valvebe-Fusion.tar.gz
+            ./build/Proton-Tkg-Wine-Fusion.tar.gz

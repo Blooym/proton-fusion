@@ -1,10 +1,14 @@
 mod proton_ge;
+mod proton_tkg;
 
 use anyhow::Result;
+use async_trait::async_trait;
 use clap::ValueEnum;
 use proton_ge::ProtonGE;
+use proton_tkg::ProtonTkg;
 use std::path::PathBuf;
 
+#[async_trait]
 pub trait ProtonBuild {
     async fn install_or_update(
         &self,
@@ -17,12 +21,16 @@ pub trait ProtonBuild {
 #[derive(Debug, Clone, ValueEnum)]
 pub enum ProtonBuildId {
     ProtonGE,
+    ProtonTkgWine,
+    ProtonTkgValvebe,
 }
 
 impl ProtonBuildId {
-    pub fn get_build(&self) -> impl ProtonBuild {
+    pub fn get_build(&self) -> Box<dyn ProtonBuild> {
         match self {
-            Self::ProtonGE => ProtonGE::default(),
+            Self::ProtonGE => Box::new(ProtonGE::default()),
+            Self::ProtonTkgWine => Box::new(ProtonTkg::wine_master()),
+            Self::ProtonTkgValvebe => Box::new(ProtonTkg::valve_be()),
         }
     }
 }

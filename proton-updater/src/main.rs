@@ -5,7 +5,7 @@ mod proton_builds;
 
 use anyhow::{Result, bail};
 use clap::Parser;
-use proton_builds::{ProtonBuild, ProtonBuildId};
+use proton_builds::ProtonBuildId;
 use std::path::PathBuf;
 
 #[derive(Parser)]

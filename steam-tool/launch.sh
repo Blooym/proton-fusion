@@ -23,12 +23,12 @@ if [[ "$1" == "run" ]]; then
 fi
 
 echo "Checking for proton updates"
-if ! "$updater_entrypoint" --install-dir-base="$tool_dir" --build="proton-ge"; then
+if ! "$updater_entrypoint" --install-dir-base="$tool_dir" --build="${PROTON_BUILD_ID}"; then
     if [ -f "$proton_entrypoint" ]; then
-    	zenity --info --title "Update Failed" --text "Something went wrong when updating Proton-GE to a new version, an older version will be used instead." --no-wrap --no-markup || true
+    	zenity --info --title "Update Failed" --text "Something went wrong when updating Proton to a new version, an older version will be used instead." --no-wrap --no-markup || true
         echo "Warning: $updater_entrypoint exited unsuccessfully, continuing with old proton install."
     else
-    	zenity --error --title "Install Failed" --text "Something went wrong when installing Proton-GE, aborting launch." --no-wrap --no-markup || true
+    	zenity --error --title "Install Failed" --text "Something went wrong when installing Proton, aborting launch." --no-wrap --no-markup || true
         echo "FATAL: $updater_entrypoint failed and $proton_entrypoint does not exist."
         exit 1
     fi

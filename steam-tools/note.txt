@@ -1,1 +1,0 @@
-When making a release a copy of the updater will automatically be placed in each steam tool directory by the CI process.

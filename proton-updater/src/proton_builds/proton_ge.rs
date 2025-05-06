@@ -1,5 +1,6 @@
 use super::ProtonBuild;
 use anyhow::Context;
+use async_trait::async_trait;
 use bytes::Buf;
 use flate2::bufread::GzDecoder;
 use std::{fs, path::PathBuf};
@@ -26,6 +27,7 @@ impl Default for ProtonGE {
     }
 }
 
+#[async_trait]
 impl ProtonBuild for ProtonGE {
     async fn install_or_update(
         &self,
