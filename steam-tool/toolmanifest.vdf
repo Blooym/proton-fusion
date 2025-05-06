@@ -1,8 +1,7 @@
 "manifest"
 {
-  "version" "2"
-  "commandline" "/launch.sh %verb%"
-  "require_tool_appid" "1628350"
-  "use_sessions" "1"
-  "compatmanager_layer_name" "proton"
+  "commandline" "/proton/proton run"
+  "commandline_getnativepath" "/proton/proton getnativepath"
+  "commandline_getcompatpath" "/proton/proton getcompatpath"
+  "commandline_waitforexitandrun" "/launch.sh waitforexitandrun"
 }

@@ -14,14 +14,6 @@ extras_dir=$tool_dir/extras
 discordrpc_entrypoint=$extras_dir/winediscordrpcbridge.exe
 # ----------------------
 
-# If the proton verb just wants to run something
-# then pass it on to the proton entrypoint instead.
-# This *should* only happen after proton is installed.
-if [[ "$1" == "run" ]]; then
-    "$proton_entrypoint" "$@"
-    exit 0
-fi
-
 echo "Checking for proton updates"
 if ! "$updater_entrypoint" --install-dir-base="$tool_dir" --build="${PROTON_BUILD_ID}"; then
     if [ -f "$proton_entrypoint" ]; then
