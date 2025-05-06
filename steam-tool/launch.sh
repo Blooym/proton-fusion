@@ -31,7 +31,7 @@ mkdir -p $extras_dir
 # Run the Discord RPC bridge if enabled.
 if [ "$DISCORDRPC_BRIDGE" = "1" ]; then
     if [ ! -f "$discordrpc_entrypoint" ]; then
-        curl --fail -L -o "$discordrpc_entrypoint" https://github.com/0e4ef622/wine-discord-ipc-bridge/releases/download/v0.0.3/winediscordipcbridge.exe
+        wget -O "$discordrpc_entrypoint" https://github.com/0e4ef622/wine-discord-ipc-bridge/releases/download/v0.0.3/winediscordipcbridge.exe
     fi
     echo "Starting Discord RPC Bridge"
     "$proton_entrypoint" run "$discordrpc_entrypoint" &
