@@ -95,9 +95,9 @@ curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.s
 
 These are additional features or functionality that can be enabled by setting environment variables in a game's launch arguments. They are supported by all custom proton versions offered by this tool.
 
-| Name               | Description                                                                                                                                                                                                                              | Enablement Variable   | Supported from |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------- |
-| Discord RPC Bridge | Automatically run `0e4ef622/wine-discord-ipc-bridge` when launching a game. This allows most Windows games to communicate with Discord and display rich presence data. Note that this may cause launching to be a bit finnicky at times. | `DISCORDRPC_BRIDGE=1` | v0.1.0         |
+| Name               | Description                                                                                                                                                                                                                              | Enablement Variable   |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Discord RPC Bridge | Automatically run `0e4ef622/wine-discord-ipc-bridge` when launching a game. This allows most Windows games to communicate with Discord and display rich presence data. Note that this may cause launching to be a bit finnicky at times. | `DISCORDRPC_BRIDGE=1` |
 
 ## Building from source
 
