@@ -16,7 +16,11 @@ Install scripts have been created to automatically handle installation for you; 
 - Go to the game of your choice -> Properties -> Compatibility
 - Select the proton version you just downloaded from the dropdown menu.
 
+
 ### GE-Proton-Fusion
+
+<details>
+<summary>Install Scripts</summary>
 
 #### Native Steam & Steamdeck
 
@@ -35,8 +39,12 @@ curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.s
 ```sh
 curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s GE-Proton-Fusion ~/snap/steam/common/.steam/root/compatibilitytools.d/GE-Proton-Fusion
 ```
+</details>
 
 ### Proton-Tkg-Valvebe-Fusion
+
+<details>
+<summary>Install Scripts</summary>
 
 #### Native Steam & Steamdeck
 
@@ -56,7 +64,12 @@ curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.s
 curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-Tkg-Valvebe-Fusion ~/snap/steam/common/.steam/root/compatibilitytools.d/Proton-Tkg-Valvebe-Fusion
 ```
 
+</details>
+
 ### Proton-Tkg-Wine-Fusion
+
+<details>
+<summary>Install Scripts</summary>
 
 #### Native Steam & Steamdeck
 
@@ -75,6 +88,8 @@ curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.s
 ```sh
 curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-Tkg-Wine-Fusion ~/snap/steam/common/.steam/root/compatibilitytools.d/Proton-Tkg-Wine-Fusion
 ```
+
+</details>
 
 ## Optional Extras
 
