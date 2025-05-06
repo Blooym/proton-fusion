@@ -66,6 +66,8 @@ impl ProtonBuild for ProtonTkg {
                 .items
                 .first()
                 .context("failed to get workflow run that was successful from main branch")?;
+
+            println!("Got run: {}:{}", run.name, run.id);
             (
                 format!(
                     "https://nightly.link/{}/{}/actions/runs/{}/{}",
@@ -74,7 +76,7 @@ impl ProtonBuild for ProtonTkg {
                     run.id,
                     self.proton_artifact_name
                 ),
-                run.head_commit.id.clone(),
+                run.id.0.to_string(),
             )
         };
 
