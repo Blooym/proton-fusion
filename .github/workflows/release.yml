@@ -50,5 +50,5 @@ jobs:
             ./build/GE-Proton-Fusion.tar.gz
             ./build/Proton-Tkg-Valvebe-Fusion.tar.gz
             ./build/Proton-Tkg-Wine-Fusion.tar.gz
-            ./build/Proton-CachyOS-Fusion
-            ./build/Proton-CachyOS-Optimised-Fusion
+            ./build/Proton-CachyOS-Fusion.tar.gz
+            ./build/Proton-CachyOS-Optimised-Fusion.tar.gz
