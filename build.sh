@@ -32,6 +32,14 @@ case "$PROTON_BUILD_NAME" in
         PROTON_NAME="GE-Proton-Fusion"
         PROTON_BUILD_ID="proton-ge"
         ;;
+    "cachyos")
+        PROTON_NAME="Proton-CachyOS-Fusion"
+        PROTON_BUILD_ID="proton-cachyos"
+        ;;
+    "cachyos-optimised")
+        PROTON_NAME="Proton-CachyOS-Optimised-Fusion"
+        PROTON_BUILD_ID="proton-cachyos-optimised"
+        ;;
     *)
         echo "Unknown Proton build name: ${PROTON_BUILD_NAME}. Valid options are: tkg-wine, tkg-valvebe, ge."
         exit 1

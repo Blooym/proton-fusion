@@ -91,6 +91,56 @@ curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.s
 
 </details>
 
+### Proton-CachyOS-Fusion
+
+<details>
+<summary>Install Scripts</summary>
+
+#### Native Steam & Steamdeck
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-CachyOS-Fusion ~/.steam/root/compatibilitytools.d/Proton-CachyOS-Fusion
+```
+
+#### Flatpak Steam
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-CachyOS-Fusion ~/.var/app/com.valvesoftware.Steam/.steam/root/compatibilitytools.d/Proton-CachyOS-Fusion
+```
+
+#### Snap Steam (Unsupported)
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-CachyOS-Fusion ~/snap/steam/common/.steam/root/compatibilitytools.d/Proton-CachyOS-Fusion
+```
+
+</details>
+
+### Proton-CachyOS-Optimised-Fusion
+
+<details>
+<summary>Install Scripts</summary>
+
+#### Native Steam & Steamdeck
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-CachyOS-Optimised-Fusion ~/.steam/root/compatibilitytools.d/Proton-CachyOS-Optimised-Fusion
+```
+
+#### Flatpak Steam
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-CachyOS-Optimised-Fusion ~/.var/app/com.valvesoftware.Steam/.steam/root/compatibilitytools.d/Proton-CachyOS-Optimised-Fusion
+```
+
+#### Snap Steam (Unsupported)
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Blooym/proton-fusion/main/install.sh | sh -s Proton-Tkg-Wine-Fusion ~/snap/steam/common/.steam/root/compatibilitytools.d/Proton-CachyOS-Optimised-Fusion
+```
+
+</details>
+
 ## Optional Extras
 
 These are additional features or functionality that can be enabled by setting environment variables in a game's launch arguments. They are supported by all custom proton versions offered by this tool.

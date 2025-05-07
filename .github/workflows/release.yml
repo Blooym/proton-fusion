@@ -32,9 +32,13 @@ jobs:
          ./build.sh ge ./build/GE-Proton-Fusion
          ./build.sh tkg-valvebe ./build/Proton-Tkg-Valvebe-Fusion
          ./build.sh tkg-wine ./build/Proton-Tkg-Wine-Fusion
+         ./build.sh cachyos ./build/Proton-CachyOS-Fusion
+         ./build.sh cachyos-optimised ./build/Proton-CachyOS-Optimised-Fusion
          tar -czf ./build/GE-Proton-Fusion.tar.gz -C ./build/GE-Proton-Fusion .
          tar -czf ./build/Proton-Tkg-Valvebe-Fusion.tar.gz -C ./build/Proton-Tkg-Valvebe-Fusion .
          tar -czf ./build/Proton-Tkg-Wine-Fusion.tar.gz -C ./build/Proton-Tkg-Wine-Fusion .
+         tar -czf ./build/Proton-CachyOS-Fusion.tar.gz -C ./build/Proton-CachyOS-Fusion .
+         tar -czf ./build/Proton-CachyOS-Optimised-Fusion.tar.gz -C ./build/Proton-CachyOS-Optimised-Fusion .
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v2
@@ -45,3 +49,5 @@ jobs:
             ./build/GE-Proton-Fusion.tar.gz
             ./build/Proton-Tkg-Valvebe-Fusion.tar.gz
             ./build/Proton-Tkg-Wine-Fusion.tar.gz
+            ./build/Proton-CachyOS-Fusion
+            ./build/Proton-CachyOS-Optimised-Fusion

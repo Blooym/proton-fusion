@@ -25,8 +25,8 @@ pub enum ProtonBuildId {
     ProtonGE,
     ProtonTkgWine,
     ProtonTkgValvebe,
-    ProtonCachyOS,
-    ProtonCachyOSOptimised,
+    ProtonCachyos,
+    ProtonCachyosOptimised,
 }
 
 impl ProtonBuildId {
@@ -35,8 +35,8 @@ impl ProtonBuildId {
             Self::ProtonGE => Box::new(ProtonGE::default()),
             Self::ProtonTkgWine => Box::new(ProtonTkg::wine_master()),
             Self::ProtonTkgValvebe => Box::new(ProtonTkg::valve_be()),
-            Self::ProtonCachyOS => Box::new(ProtonCachyOS::standard()),
-            Self::ProtonCachyOSOptimised => Box::new(ProtonCachyOS::optimised()),
+            Self::ProtonCachyos => Box::new(ProtonCachyOS::standard()),
+            Self::ProtonCachyosOptimised => Box::new(ProtonCachyOS::optimised()),
         }
     }
 }

@@ -2,7 +2,7 @@ use super::ProtonBuild;
 use anyhow::Context;
 use async_trait::async_trait;
 use bytes::Buf;
-use flate2::bufread::GzDecoder;
+use flate2::read::GzDecoder;
 use std::{fs, path::PathBuf};
 use tar::Archive;
 
