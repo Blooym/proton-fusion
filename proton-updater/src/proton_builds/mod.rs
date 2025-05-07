@@ -1,9 +1,11 @@
+mod proton_cachyos;
 mod proton_ge;
 mod proton_tkg;
 
 use anyhow::Result;
 use async_trait::async_trait;
 use clap::ValueEnum;
+use proton_cachyos::ProtonCachyOS;
 use proton_ge::ProtonGE;
 use proton_tkg::ProtonTkg;
 use std::path::PathBuf;
@@ -23,6 +25,8 @@ pub enum ProtonBuildId {
     ProtonGE,
     ProtonTkgWine,
     ProtonTkgValvebe,
+    ProtonCachyOS,
+    ProtonCachyOSOptimised,
 }
 
 impl ProtonBuildId {
@@ -31,6 +35,8 @@ impl ProtonBuildId {
             Self::ProtonGE => Box::new(ProtonGE::default()),
             Self::ProtonTkgWine => Box::new(ProtonTkg::wine_master()),
             Self::ProtonTkgValvebe => Box::new(ProtonTkg::valve_be()),
+            Self::ProtonCachyOS => Box::new(ProtonCachyOS::standard()),
+            Self::ProtonCachyOSOptimised => Box::new(ProtonCachyOS::optimised()),
         }
     }
 }

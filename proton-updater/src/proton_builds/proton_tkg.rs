@@ -1,11 +1,7 @@
 use super::ProtonBuild;
 use anyhow::Context;
 use async_trait::async_trait;
-use std::{
-    fs,
-    io::{Cursor, Read},
-    path::PathBuf,
-};
+use std::{fs, io::Cursor, path::PathBuf};
 use tar::Archive;
 use zip::ZipArchive;
 
@@ -96,11 +92,8 @@ impl ProtonBuild for ProtonTkg {
 
             // Read the tar file from the artifact zip. The zip only contains 1 file, so we can assume it's always index 0.
             let mut zip = ZipArchive::new(Cursor::new(bytes))?;
-            let mut zip = zip.by_index(0)?;
-
-            let mut tar_buffer = Vec::with_capacity(zip.size() as usize);
-            zip.read_to_end(&mut tar_buffer)?;
-            let mut archive = Archive::new(Cursor::new(tar_buffer));
+            let zip_file = zip.by_index(0)?;
+            let mut archive = Archive::new(zip_file);
 
             // Cleanup any previous failed installs.
             let _ = fs::remove_dir_all(&temp_dir_path);

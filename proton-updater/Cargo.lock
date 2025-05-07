@@ -1305,6 +1305,7 @@ dependencies = [
  "reqwest",
  "tar",
  "tokio",
+ "xz2",
  "zip",
 ]
 
